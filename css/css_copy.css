@@ -425,6 +425,13 @@ footer.row {
   color: #4b4b4b;
 }
 
+.col-test {
+  background-color: red;
+  width: 500px;
+  height: 250px;
+  margin: 5px;
+}
+
 label {
   font-size: 12px;
   margin-left: 12px;
@@ -708,6 +715,7 @@ label {
   right: 0;
   margin: 0 auto;
   z-index: 9999;
+  padding: 0px 50px 0px 50px;
 }
 
 .header-area .logo {
@@ -727,7 +735,7 @@ label {
 
 .header-area .main-menu nav ul li a {
   font: 700 2.2vw/16px "Oxygen", sans-serif;
-  padding: 36px 0px 0px;
+  padding: 25px 0px 0px;
   display: inline-block;
   text-transform: uppercase;
   text-shadow: none;
@@ -826,7 +834,7 @@ label {
   }
 
   .logo_img {
-    width: 12vw;
+    width: 11vw;
     margin-right: 20px;
   }
 
@@ -1565,14 +1573,15 @@ label {
 .work-progressbar-area .work-progress .work-progressbar .circle .chart-percent {
   position: absolute;
   top: 8px;
-  width: 84px;
-  height: 84px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   left: 8px;
-  font-size: 30px;
+  font-size: 70px;
   font-family: "Rufina", serif;
   font-weight: 700;
 }
+
 
 .work-progressbar-area .work-progress .work-progressbar .circle .chart-percent .text {
   position: absolute;

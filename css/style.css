@@ -268,7 +268,12 @@ section.row, header.row, footer.row {
 
 /*==== 3 Area colors ====*/
 
+.new_version {
+  width: 100%;
+  height: 100px;
+  background-color: red;
 
+}
 
 .header-area .main-menu nav ul li a {
   color: #000;
@@ -651,7 +656,6 @@ label{
 /*==== 4. Styles ====*/
 /*==== 4.1 Header area css ====*/
 .header-area {
-  position: absolute;
   width: 100%;
   left: 0;
   top: 0;
@@ -797,11 +801,6 @@ label{
 /*====================================================*/
 /*====================================================*/
 /*==== 4.3 slider area css =====*/
-
-.slider {
-  margin-top: 150px;
-
-}
 
 .work_item {
   flex-shrink: 1;
