@@ -93,7 +93,7 @@
                 $(this).waypoint(function () {
                     $('.circle').circleProgress({
                         startAngle: -14.1,
-                        size: 160,
+                        size: 100,
                         duration: 2000,
                         easing: "circleProgressEase",
                         emptyFill: 'rgb(241, 241, 241)',
@@ -198,47 +198,14 @@
         colorBox.toggleClass('open');
     }, 5000);
 
-    // text size
-
-    function changeFontSize(size) {
-        const elements = document.querySelectorAll('h1, h2, p, a');
-        elements.forEach((element) => {
-            element.style.fontSize = size + 'px';
-        });
-    }
-
-    const buttonSmall = document.getElementById('button_small');
-    const buttonMedium = document.getElementById('button_medium');
-    const buttonLarge = document.getElementById('button_large');
-
-    buttonSmall.addEventListener('click', function () {
-        changeFontSize(16);
-    });
-
-    buttonMedium.addEventListener('click', function () {
-        changeFontSize(20);
-    });
-
-    buttonLarge.addEventListener('click', function () {
-        changeFontSize(26);
-    });
-
-
-    // New version
-
-    const button = document.getElementById('myButton');
-    const block = document.getElementById('new_version');
-
-    button.addEventListener('click', function() {
-        block.classList.add('visible');
-    });
-
     //Service Middle Content
-    var serviceFigure = $('#services-area figure');
-    var serviceFigureHeight = serviceFigure.width();
+    let serviceFigure = $('#services-area figure');
+    let serviceFigureHeight = serviceFigure.width();
     serviceFigure.css('height', serviceFigureHeight);
 
     $('a[href="#"]').click(function (e) {
         e.preventDefault();
     })
 })(jQuery)
+
+

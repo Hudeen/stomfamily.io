@@ -102,6 +102,9 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 
 /*=== 2. Content styles ====*/
+.hidden {
+  z-index: 9999;
+}
 
 .loader{
   position: fixed;
@@ -273,6 +276,27 @@ section.row, header.row, footer.row {
   height: 100px;
   background-color: red;
 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.version_text {
+  font-size: 25px !important;
+}
+
+.button_version {
+  padding: 5px 20px 5px 20px;
+  margin: 0px 5px 0px 5px;
+}
+
+.large {
+  text-decoration: underline;
+}
+
+nav:hover {
+  cursor: pointer;
 }
 
 .header-area .main-menu nav ul li a {
@@ -420,12 +444,6 @@ section.row, header.row, footer.row {
 }
 .question-area .question-contact-form .contact-form .form-control {
   color: #4b4b4b;
-}
-
-label{
-  font-size: 12px;
-  margin-left: 12px;
-  color: #12b5f1;
 }
 
 /*==== 3.8 work-progressbar-area color ===*/
@@ -677,7 +695,7 @@ label{
   position: relative;
 }
 .header-area .main-menu nav ul li a {
-  font: 700 12px/46px "Oxygen", sans-serif;
+  font: 700 16px/46px "Oxygen", sans-serif;
   letter-spacing: 2px;
   padding: 36px 0px 20px;
   display: inline-block;
@@ -686,6 +704,7 @@ label{
 }
 .header-area .main-menu nav ul li + li {
   margin-left: 25px;
+
 }
 .header-area .main-menu nav ul li .sub-menu {
   position: absolute;
@@ -735,6 +754,15 @@ label{
   }
   .logo_mobile {
     width: 100px;
+  }
+  .slider {
+    margin-top: 80px;
+  }
+  .mean-bar {
+    z-index: 9;
+  }
+  .mobile-menu-area {
+    z-index: 5;
   }
 }
 @media (max-width: 600px) {

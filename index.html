@@ -15,7 +15,8 @@
 
     <!--Bootstrap css -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!--font-awosome icon css-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -44,7 +45,9 @@
 
     <!--responsive css-->
     <link rel="stylesheet" href="css/responsive.css">
-    <script src="http://finevision.ru/static/js/finevision_banner.js"></script>
+
+    <!-- Version -->
+    <script src="./js/version.js"></script>
 </head>
 
 <body>
@@ -59,33 +62,41 @@
             </div>
         </div>
     </div>
-    <div class="new_version" id="new_version"></div>
+
+    <div id="block" class="hidden">
+        <button class="fontSizeButton" data-font-size="-5">Increase h1 by 5px</button>
+        <button class="fontSizeButton" data-font-size="5">Increase h2 by 10px</button>
+        <button class="fontSizeButton" data-font-size="10">Increase a and span by 20px</button>
+
+        <button id="defaultButton">По умолчанию</button>
+        <button id="blackButton">Черный фон, белый текст</button>
+        <button id="blueButton">Синий фон, желтый текст</button>
+
+    </div>
+
     <!-- Loader End -->
     <!--start header area-->
     <header class="header-area">
-            <div class="row header-row">
-                <div class="col-md-2">
-                    <div class="logo">
-                        <a href="index.html"><img class="logo_img" src="image/logo.png" alt=""></a>
-                    </div>
+        <div class="row header-row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <a href="index.html"><img class="logo_img" src="image/logo.png" alt=""></a>
                 </div>
-                <div class="col">
-                    <div class="main-menu">
-                        <nav>
-                            <button id="button_small"></button>
-                            <button id="button_medium"></button>
-                            <button id="button_large"></button>
-                            <ul id="nav">
-                                <li class="active"><a href="#">Главная</a></li>
-                                <li><a href="about-us.html">Документы</a></li>
-                                <li><a href='price.html'>Прейскурант</a></li>
-                                <li><a id="myButton">Версия для слабовидящих</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-
             </div>
+            <div class="col">
+                <div class="main-menu">
+                    <nav>
+                        <ul id="nav">
+                            <li class="active"><a href="#">Главная</a></li>
+                            <li><a href="about-us.html">Документы</a></li>
+                            <li><a href='price.html'>Прейскурант</a></li>
+                            <li><a onclick="toggleBlock()">Версия для слабовидящих</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
     </header>
     <!-- mobile-menu-area start -->
     <div class="mobile-menu-area">
@@ -102,7 +113,7 @@
                                 </li>
                                 <li><a href="about-us.html">Документы</a></li>
                                 <li><a href='price.html'>Прейскурант</a></li>
-                                <li><a onclick="finevision.activate_navbar()">Версия для слабовидящих</a></li>
+                                <li><a onclick="toggleBlock()">Версия для слабовидящих</a></li>
                             </ul>
                         </nav>
                     </div>
