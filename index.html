@@ -46,8 +46,6 @@
     <!--responsive css-->
     <link rel="stylesheet" href="css/responsive.css">
 
-    <!-- Version -->
-    <script src="./js/version.js"></script>
 </head>
 
 <body>
@@ -62,17 +60,23 @@
             </div>
         </div>
     </div>
+    
+    <div id="block1" class="block hidden">
+        <button class="fontSizeButton" onclick="changeFontSize(-5)">Уменьшить h1 на 5px</button>
+        <button class="fontSizeButton" onclick="changeFontSize(5)">Увеличить h1 на 5px</button>
+        <button class="fontSizeButton" onclick="changeFontSize(10)">Увеличить h1 на 5px</button>
+    
+        <button id="defaultButton">Default Color</button>
+        <button id="blackButton">Black Color</button>
+        <button id="blueButton">Blue Color</button>
 
-    <div id="block" class="hidden">
-        <button class="fontSizeButton" data-font-size="-5">Increase h1 by 5px</button>
-        <button class="fontSizeButton" data-font-size="5">Increase h2 by 10px</button>
-        <button class="fontSizeButton" data-font-size="10">Increase a and span by 20px</button>
-
-        <button id="defaultButton">По умолчанию</button>
-        <button id="blackButton">Черный фон, белый текст</button>
-        <button id="blueButton">Синий фон, желтый текст</button>
-
+        <button onclick="turnOff()">Выключить</button>
+        <button onclick="turnOn()">Включить</button>
+        <button onclick="toggleColor()">Ч/Б</button>
     </div>
+
+    
+    <script src="./js/version.js"></script>
 
     <!-- Loader End -->
     <!--start header area-->
@@ -90,7 +94,7 @@
                             <li class="active"><a href="#">Главная</a></li>
                             <li><a href="about-us.html">Документы</a></li>
                             <li><a href='price.html'>Прейскурант</a></li>
-                            <li><a onclick="toggleBlock()">Версия для слабовидящих</a></li>
+                            <li><a onclick="toggleBlock('block1')">Версия для слабовидящих</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -113,7 +117,7 @@
                                 </li>
                                 <li><a href="about-us.html">Документы</a></li>
                                 <li><a href='price.html'>Прейскурант</a></li>
-                                <li><a onclick="toggleBlock()">Версия для слабовидящих</a></li>
+                                <li><a onclick="toggleBlock('block1')">Версия для слабовидящих</a></li>
                             </ul>
                         </nav>
                     </div>
