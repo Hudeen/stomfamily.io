@@ -1,4 +1,5 @@
 let previousFontSizes = {};
+let imagesAreOn = true; // Track the state of the images
 
 function toggleBlock(blockId) {
     const block = document.getElementById(blockId);
@@ -8,6 +9,8 @@ function toggleBlock(blockId) {
         if (block.classList.contains("hidden")) {
             resetFontSizes();
             defaultButton.click();
+            turnOn();
+            toggleColor();
         } else {
             removeAllStyles();
         }
@@ -45,8 +48,20 @@ function resetFontSizes() {
         }
 
         delete element.dataset.fontSize; // Remove the data-font-size attribute
-        previousFontSizes = {}; // Reset the previousFontSizes object
     });
+
+    previousFontSizes = {}; // Reset the previousFontSizes object
+}
+
+function removeAllStyles() {
+    const elementsToUpdate = document.querySelectorAll("h1, h2, a, p, span");
+
+    elementsToUpdate.forEach(function (element) {
+        element.style.removeProperty("font-size");
+        delete element.dataset.fontSize; // Remove the data-font-size attribute
+    });
+
+    previousFontSizes = {}; // Reset the previousFontSizes object
 }
 
 const defaultButton = document.getElementById("defaultButton");
@@ -75,6 +90,7 @@ function turnOff() {
     for (var i = 0; i < images.length; i++) {
         images[i].style.display = "none";
     }
+    imagesAreOn = false;
 }
 
 function turnOn() {
@@ -82,6 +98,7 @@ function turnOn() {
     for (var i = 0; i < images.length; i++) {
         images[i].style.display = "block";
     }
+    imagesAreOn = true;
 }
 
 function toggleColor() {
