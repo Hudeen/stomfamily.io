@@ -60,37 +60,41 @@
             </div>
         </div>
     </div>
-    
-    <div id="block1" class="block hidden">
-        <button class="fontSizeButton" onclick="changeFontSize(-5)">Уменьшить h1 на 5px</button>
-        <button class="fontSizeButton" onclick="changeFontSize(5)">Увеличить h1 на 5px</button>
-        <button class="fontSizeButton" onclick="changeFontSize(10)">Увеличить h1 на 5px</button>
-    
-        <button id="defaultButton">Default Color</button>
-        <button id="blackButton">Black Color</button>
-        <button id="blueButton">Blue Color</button>
 
-        <button onclick="turnOff()">Выключить</button>
-        <button onclick="turnOn()">Включить</button>
-        <button onclick="toggleColor()">Ч/Б</button>
+    <div id="block1" class="block hidden">
+        <div class="block_item">
+            <h1 class="settings_text">Размер шрифта</h1>
+            <button class="fontSizeButton settings_button" onclick="changeFontSize(-5)">а</button>
+            <button class="fontSizeButton settings_button" onclick="changeFontSize(5)">А</button>
+            <button class="fontSizeButton settings_button" onclick="changeFontSize(10)">АА</button>
+        </div>
+        <div class="block_item">
+            <h1 class="settings_text">Цвет сайта</h1>
+            <button class="colorButton_default settings_button" id="defaultButton">С</button>
+            <button class="colorButton_black settings_button" id="blackButton">С</button>
+            <button class="colorButton_blue settings_button" id="blueButton">С</button>
+        </div>
+        <div class="block_item">
+            <h1 class="settings_text">Изображения</h1>
+            <button class="settings_button" onclick="turnOff()">Выкл</button>
+            <button class="settings_button" onclick="turnOn()">Вкл</button>
+            <button class="settings_button" onclick="toggleColor()">Ч/Б</button>
+        </div>
     </div>
 
-    
     <script src="./js/version.js"></script>
 
     <!-- Loader End -->
     <!--start header area-->
     <header class="header-area">
         <div class="row header-row">
-            <div class="col-md-2">
-                <div class="logo">
-                    <a href="index.html"><img class="logo_img" src="image/logo.png" alt=""></a>
-                </div>
-            </div>
             <div class="col">
                 <div class="main-menu">
                     <nav>
                         <ul id="nav">
+                            <div class="logo">
+                                <a href="index.html"><img class="logo_img" src="image/logo.png" alt=""></a>
+                            </div>
                             <li class="active"><a href="#">Главная</a></li>
                             <li><a href="about-us.html">Документы</a></li>
                             <li><a href='price.html'>Прейскурант</a></li>
@@ -272,7 +276,7 @@
                         <div class="circle" data-value="0.42" data-fill="{&quot;color&quot;: &quot;#12b5f1&quot;}"
                             data-trackcolor="">
                             <div class="chart-percent">
-                                <div class="text"><span class="counter">216</span>%</div>
+                                <div class="text"><span class="counter">216</span><span>%</span></div>
                             </div>
                         </div>
                         <p>Вставленных зубов</p>
@@ -283,7 +287,7 @@
                         <div class="circle" data-value="0.70" data-fill="{&quot;color&quot;: &quot;#12b5f1&quot;}"
                             data-trackcolor="">
                             <div class="chart-percent">
-                                <div class="text"><span class="counter">110</span>%</div>
+                                <div class="text"><span class="counter">110</span><span>%</span></div>
                             </div>
                         </div>
                         <p>Востановленных челюстей</p>

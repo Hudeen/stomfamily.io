@@ -99,11 +99,47 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   box-shadow: none;
 }
 
+.colorButton_default {
 
+}
 
+.colorButton_black {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.colorButton_blue {
+  background-color: #00008b !important;
+  color: rgb(255, 255, 0) !important;
+}
+
+.settings_button {
+  font-weight: 700;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000 !important;
+  padding: 6px 21px!important;
+  font-size: 14px!important;
+  text-transform: uppercase;
+  margin-left: -1px;
+}
+
+.settings_text {
+  margin-right: 10px;
+  margin-bottom: 0;
+  font-weight: 100;
+  color: #000;
+  font-size: 18px !important;
+  align-items: center;
+  display: flex;
+}
 /*=== 2. Content styles ====*/
 .hidden {
   z-index: 9999;
+}
+
+.block_item{
+  display: flex;
 }
 
 .loader{
@@ -274,11 +310,11 @@ section.row, header.row, footer.row {
 .block {
   position: relative;
   z-index: 9999;
-  height: 100px;
+  height: 80px;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 .new_version {
@@ -303,6 +339,12 @@ section.row, header.row, footer.row {
 
 .large {
   text-decoration: underline;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav:hover {
@@ -402,9 +444,6 @@ nav:hover {
 }
 
 /*==== 3.5 clients-about-area color ====*/
-.clients-about-area:after {
-  background: #14b6f2;
-}
 
 .clients-about-area .section-title {
   color: #fff;
@@ -623,8 +662,8 @@ nav:hover {
 }
 
 /*==== 3.16 footer area color =====*/
-.footer-area {
-  background: #262626;
+footer {
+  background-color: #262626;
 }
 
 .footer-area .footer-top {
@@ -692,6 +731,10 @@ nav:hover {
   z-index: 9999;
   padding: 10px 0px;
 }
+.logo {
+  margin-right: 20px;
+}
+
 .header-area .logo {
   display: inline-block;
   padding: 41px 0px 20px;

@@ -10,7 +10,7 @@ function toggleBlock(blockId) {
             resetFontSizes();
             defaultButton.click();
             turnOn();
-            toggleColor();
+            toggleColorOff();
         } else {
             removeAllStyles();
         }
@@ -48,9 +48,9 @@ function resetFontSizes() {
         }
 
         delete element.dataset.fontSize; // Remove the data-font-size attribute
+        previousFontSizes = {}; // Reset the previousFontSizes object
     });
 
-    previousFontSizes = {}; // Reset the previousFontSizes object
 }
 
 function removeAllStyles() {
@@ -59,56 +59,81 @@ function removeAllStyles() {
     elementsToUpdate.forEach(function (element) {
         element.style.removeProperty("font-size");
         delete element.dataset.fontSize; // Remove the data-font-size attribute
+        previousFontSizes = {}; // Reset the previousFontSizes object
     });
 
-    previousFontSizes = {}; // Reset the previousFontSizes object
 }
+
+// Изменение цветов на странице
 
 const defaultButton = document.getElementById("defaultButton");
 const blackButton = document.getElementById("blackButton");
 const blueButton = document.getElementById("blueButton");
 
-defaultButton.addEventListener("click", function() {
-    document.body.style.backgroundColor = "#ffffff";
-    document.body.style.color = "#000000";
+defaultButton.addEventListener("click", function () {
+    document.body.style.backgroundColor = "";
+    applyStylesToElements("h1, h2, a, p, span, li", "");
+    document.querySelector("footer").style.backgroundColor = "";
 });
 
-blackButton.addEventListener("click", function() {
+blackButton.addEventListener("click", function () {
     document.body.style.backgroundColor = "#000000";
-    document.body.style.color = "#ffffff";
+    applyStylesToElements("h1, h2, a, p, span, li", "#ffffff");
+    document.querySelector("footer").style.backgroundColor = "#000000";
 });
 
-blueButton.addEventListener("click", function() {
+blueButton.addEventListener("click", function () {
     document.body.style.backgroundColor = "#00008b";
-    document.body.style.color = "#ff0";
+    applyStylesToElements("h1, h2, a, p, span, li", "#ff0");
+    document.querySelector("footer").style.backgroundColor = "#00008b";
 });
+
+
+function applyStylesToElements(selector, color) {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach(function (element) {
+        if (element.tagName === "H1" || element.tagName === "H2" || element.tagName === "A" || element.tagName === "P" || element.tagName === "SPAN" || element.tagName === "LI" || element.tagName === "FOOTER") {
+            element.style.color = color;
+        }
+    });
+}
 
 // Выключение, включение, режим ч/б
 
 function turnOff() {
-    var images = document.getElementsByTagName("img");
-    for (var i = 0; i < images.length; i++) {
+    let images = document.getElementsByTagName("img");
+    for (let i = 0; i < images.length; i++) {
         images[i].style.display = "none";
     }
     imagesAreOn = false;
 }
 
 function turnOn() {
-    var images = document.getElementsByTagName("img");
-    for (var i = 0; i < images.length; i++) {
+    let images = document.getElementsByTagName("img");
+    for (let i = 0; i < images.length; i++) {
         images[i].style.display = "block";
     }
     imagesAreOn = true;
 }
 
 function toggleColor() {
-    var images = document.getElementsByTagName("img");
-    for (var i = 0; i < images.length; i++) {
-        var image = images[i];
+    let images = document.getElementsByTagName("img");
+    for (let i = 0; i < images.length; i++) {
+        let image = images[i];
         if (image.style.filter === "grayscale(100%)") {
             image.style.filter = "none";
         } else {
             image.style.filter = "grayscale(100%)";
+        }
+    }
+}
+
+function toggleColorOff() {
+    let images = document.getElementsByTagName("img");
+    for (let i = 0; i < images.length; i++) {
+        let image = images[i];
+        if (image.style.filter === "grayscale(100%)") {
+            image.style.filter = "none";
         }
     }
 }
