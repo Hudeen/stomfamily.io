@@ -661,6 +661,12 @@ nav:hover {
   color: #fff;
 }
 
+
+.map_block {
+  width: 100%;
+  height: 526px;
+}
+
 /*==== 3.16 footer area color =====*/
 footer {
   background-color: #262626;
@@ -817,11 +823,15 @@ footer {
   .mobile-menu-area {
     z-index: 5;
   }
+  #nav {
+    flex-direction: column;
+  }
 }
 @media (max-width: 600px) {
   .section-title {
     font-size: 3vw;
   }
+
 }
 
 @media (max-width: 400px) {
@@ -830,6 +840,7 @@ footer {
   }
   .button {
     font: 700 5px/50px "Oxygen", sans-serif;
+      letter-spacing: none;
   }
 }
 
@@ -846,7 +857,7 @@ footer {
   .logo_img {
     width: 140px;
   }
-  
+
 }
 @media (max-width: 991px) {
   .mobile-menu-area {
@@ -855,7 +866,25 @@ footer {
   .logo_mobile {
     width: 100px;
   }
+
+  .block {
+    flex-direction: column;
+    background-color: #fff;
+    height: 140px;
 }
+
+  .settings_text {
+    font-size: 12px !important;
+  }
+
+.settings_button {
+    padding: 6px 15px!important;
+    font-size: 12px!important;
+}
+
+
+}
+
 .mobile-menu-area .mean-container .mean-bar {
   padding-top: 0px;
 }
@@ -1189,7 +1218,6 @@ margin: 0px 20px;
 /*=== 4.9 button css ===*/
 .button {
   font: 700 14px/50px "Oxygen", sans-serif;
-  letter-spacing: 2px;
   padding: 0px 20px;
   text-transform: uppercase;
   border: 0px;
@@ -1203,6 +1231,7 @@ margin: 0px 20px;
   position: relative;
   z-index: 2;
 }
+
 .button:before {
   content: "";
   position: absolute;

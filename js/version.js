@@ -11,8 +11,21 @@ function toggleBlock(blockId) {
             defaultButton.click();
             turnOn();
             toggleColorOff();
+            
+            const thirdBlock = document.getElementById("thirdBlock");
+            thirdBlock.style.marginTop = ""; // Убираем отступ сверху
+            
+            const fourthBlock = document.getElementById("fourthBlock");
+            fourthBlock.style.marginTop = ""; // Убираем отступ сверху
         } else {
             removeAllStyles();
+            if (window.innerWidth < 968) {
+                const thirdBlock = document.getElementById("thirdBlock");
+                thirdBlock.style.marginTop = "140px"; // Добавляем отступ сверху
+                
+                const fourthBlock = document.getElementById("fourthBlock");
+                fourthBlock.style.marginTop = "240px"; // Добавляем отступ сверху
+            }
         }
     }
 }
